@@ -1,7 +1,18 @@
 <html>
 <head>
+    <link rel="stylesheet" href="style_tugas1.css">
+    <style>
+        footer{
+            clear: both;
+            position: relative;
+            height: 200px;
+            margin-top: -200px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <div id="jumbotron"></div>
     <div class="kolom1">
         <nav>
             <ul>
@@ -45,7 +56,34 @@
                 </p>
             </section>
         </article>
-        <form action=""></form>
+        <h2>Seberapa wibu kamu?</h2>
+        <form action="" method="POST">
+            <label>Nama: </label><br>
+            <input type="text" name="nama"><br>
+
+            <label>Asal Provinsi: </label><br>
+            <select>
+                <option value="Lampung">Lampung</option>
+                <option value="Sumsel">Sumatera Selatan</option>
+                <option value="Jakarta">Jakarta</option>
+                <option value="Other">Lainnya</option>
+            </select><br><br>
+            <h3>Pertanyaan</h3>
+            <label>Sebutkan anime dengan Main Character(MC) "Asta dan Yuno"</label><br>
+            <input type="text" name="soal1"><br>
+
+            <label>Pilihlah anime dengan MC "Shiba Tatsuya"</label><br>
+            <input type="radio" name="soal2" value="false">Charlotte
+            <input type="radio" name="soal2" value="true">Mahouka Kouko
+            <input type="radio" name="soal2" value="false">Kenja no Mago<br><br>
+
+            <label>Pilihlah anime season Fall 2020</label><br>
+            <input type="radio" name="soal3" value="false">Maou Gakuin
+            <input type="radio" name="soal3" value="false">Arslan Senki
+            <input type="radio" name="soal3" value="true">Tonikaku Kawaii<br>
+
+            <button name="submit" value="submit">Submit</button>
+        </form>
     </div>
     <footer>
         <p>Copyright &copy 118140109 | Rafly Rigan Nagachi</p>
