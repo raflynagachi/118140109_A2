@@ -1,0 +1,142 @@
+$primaryColor: #f5d061;
+$altColor: #e6af2e;
+$secondaryColor: #ececec;
+$bgcolour: #282f44;
+$number1: 20px;
+$align1: center;
+$sectionPadding:50px;
+
+*{
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.jumbotron{
+    background-image: url("https://i.pinimg.com/originals/fc/19/ef/fc19ef294f445494cb05bda231a97046.png");
+    min-height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+    .container{
+      max-width: fit-content;
+      background-color: $secondaryColor;
+      font-style: bold;
+      padding: 10px;
+      p{
+          margin: 10px;
+          font-size: small;
+          font-style: italic;
+      }
+    }
+}
+
+.navbar{
+    width: 100%;
+    position: sticky;
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: $bgcolour;
+    }
+    li{
+        display: inline-block;
+        margin-right: $number1;
+        a{
+            display: block;
+            float: right;
+            text-align: $align1;
+            font-style: bold;
+            text-decoration: none;
+            padding: 15px $number1;
+            color: white;
+        }
+    }
+    li a:hover{
+        background-color: $primaryColor;
+        color: black;
+    }
+}
+
+#home{
+    text-align: center;
+    background-color: $bgcolour;
+    color: $secondaryColor;
+    min-height: fit-content;
+    padding: $sectionPadding;
+    h1{
+        text-align: left;
+        font-style: oblique;
+        font-size: xx-large;
+    };
+    p{
+        padding: 50px;
+        font-size: x-large;
+    };
+    button{
+        font-style: bold;
+        font-size: x-large;
+        background-color: $altColor;
+        padding: 20px;
+        border: 5px white;
+        border-radius: 30px;
+    };
+    button:hover{
+        background-color: $primaryColor;
+    }
+}
+
+#contact{
+    padding: $sectionPadding;
+    background-color: $secondaryColor;
+}
+
+#gallery{ 
+    text-align: center;
+    background-color: $bgcolour;
+    color: $secondaryColor;
+    padding: $sectionPadding;
+    img{
+        display: inline-block;
+        vertical-align: top;
+        border: 1px solid #ECEDE8;
+        border-radius: 10px;
+        margin: 10px 10px;
+        overflow: hidden;
+        height: 265px;
+        width: 265px;
+        transition: transform .2s;
+    };
+    img:hover{
+        transform: scale(1.5);
+    }
+}
+
+#about{
+    padding: $sectionPadding;
+    background-color: $secondaryColor;
+}
+
+.caption{
+    text-align: center;
+    h1{
+        font-size: 35px;
+        font-style: bold;
+    };
+    p{
+        padding: 20px;
+        font-style: italic;
+    };
+}
+
+.footer{
+    text-align: center;
+    background-color: $bgcolour;
+    color: $secondaryColor;
+    padding: 20px;
+    margin: 0;
+}
