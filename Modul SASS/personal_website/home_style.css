@@ -113,11 +113,34 @@
   background-color: #ececec;
 }
 
+form {
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+}
+form .form {
+  padding: 10px;
+  width: 80%;
+  margin: 5px;
+}
+form button {
+  font-style: bold;
+  background: #282f44;
+  padding: 15px;
+  border: 5px white;
+  border-radius: 30px;
+  color: white;
+}
+form button:hover {
+  background: #f5d061;
+  color: #282f44;
+}
+
 .caption {
   text-align: center;
 }
 .caption h1 {
-  font-size: 35px;
+  font-size: 35pt;
   font-style: bold;
 }
 .caption p {

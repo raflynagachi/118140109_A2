@@ -121,10 +121,33 @@ $sectionPadding:50px;
     background-color: $secondaryColor;
 }
 
+form{
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    .form{
+        padding: 10px;
+        width: 80%;
+        margin: 5px;
+    }
+    button{
+        font-style: bold;
+        background: $bgcolour;
+        padding: 15px;
+        border: 5px white;
+        border-radius: 30px;
+        color: white;
+    };
+    button:hover{
+        background: $primaryColor;
+        color: $bgcolour;
+    }
+}
+
 .caption{
     text-align: center;
     h1{
-        font-size: 35px;
+        font-size: 35pt;
         font-style: bold;
     };
     p{
