@@ -8,9 +8,15 @@
             "napoleon", "kifuat", "samidi",
             "paijo", "dukindam", "aben", "udi"
         ];
-        foreach($values as $nama){
-            for(int $i=0; $i<$nama)
-            $values;
+        echo "Data acak: <br>";
+        foreach($nama as $data){
+            echo $data ." ";
+        }
+        echo "<br>";
+        sort($nama);
+        echo "Data terurut: <br>";
+        foreach($nama as $data){
+            echo $data ." ";
         }
     ?>    
 </body>
