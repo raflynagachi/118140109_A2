@@ -1,3 +1,4 @@
+<p>==============================</p>
 <h2>Search data</h2>
 <form action="searchProcess.php" method="post">
     <label>nama : </label>

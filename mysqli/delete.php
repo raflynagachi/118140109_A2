@@ -1,3 +1,4 @@
+<p>==============================</p>
 <h2>Hapus data</h2>
 <form method="post" action="deleteProcess.php">
     <label>nim  :</label>

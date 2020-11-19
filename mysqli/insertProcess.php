@@ -4,10 +4,14 @@
     $nama = $_POST['nama'];
     $alamat = $_POST['alamat'];
     $jurusan = $_POST['jurusan'];
-    $search_id_jur = "select id_jur from jurusan where
-    nama=$jurusan";
     $query = "insert into mahasiswa values (
-        '$nim', '$nama', '$alamat', '$search_id_jur'
+        '$nim', '$nama', '$alamat', '$jurusan'
     )";
     $hasil = mysqli_query($koneksi, $query);
+    if($hasil){
+        echo "<script>alert('data disimpan');</script>";
+    }else{
+        echo "<script>alert('data gagal disimpan');</script>";
+    }
+    echo "<script>location='home.php';</script>";
 ?>

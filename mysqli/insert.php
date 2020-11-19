@@ -6,22 +6,22 @@
     <tr>
         <td>nim</td>
         <td>:</td>
-        <td><input type="text" name="nim"></td>
+        <td><input type="text" name="nim" required></td>
     </tr>
     <tr>
         <td>nama</td>
         <td>:</td>
-        <td><input type="text" name="nama"></td>
+        <td><input type="text" name="nama" required></td>
     </tr>
     <tr>
         <td>alamat</td>
         <td>:</td>
-        <td><input type="text" name="alamat"></td>
+        <td><input type="text" name="alamat" required></td>
     </tr>
     <tr>
         <td>jurusan</td>
         <td>:</td>
-        <td><select name="jurusan">
+        <td><select name="jurusan" required>
             <option value="IF">Teknik Informatika</option>
             <option value="EL">Teknik Elektro</option>
             <option value="FA">Farmasi</option>
