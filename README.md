@@ -1,6 +1,8 @@
 # 118140109_A2
 repo praktikum Web ITERA
-===setting config===
+
+======setting config======
+
 config/config.php ==>> $config['base_url'] = 'http://localhost/prakWeb/week4/login-ci/';
 
 config/routes.php ==>> 
