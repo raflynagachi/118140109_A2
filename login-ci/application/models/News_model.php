@@ -8,12 +8,12 @@ class News_model extends CI_Model {
     
     public function get_news($slug = FALSE)
     {   
-        if($this->session->userdata['role'] == 'admin' && $slug === FALSE){
-            $query = $this->db->get('news');
-            return $query->result_array();
-        } 
-        else if ($slug === FALSE)
+        if ($slug === FALSE)
         {
+            if($this->session->userdata['role'] == 'admin'){
+                $query = $this->db->get('news');
+                return $query->result_array();
+            }
             $query = $this->db->get_where('news', array('user_id' => $this->session->userdata('user_id')));
             return $query->result_array(); // $query->result(); // returns object
         }
