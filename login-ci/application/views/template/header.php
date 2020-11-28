@@ -10,6 +10,8 @@
 			
 			<?php if ($this->session->userdata('is_logged_in')) { 
 					echo '<b>Logged in as:</b> ' . $this->session->userdata('username');
+					echo ' | ' . "<a href=" . site_url('user/delete/'.$this->session->userdata('user_id'));
+					echo 'onClick="return confirm("Are you sure you want to delete?")">Delete Account</a> |';
 					echo ' | ' . "<a href=" . site_url('user/logout') . ">Logout</a>";
 				} else {
 			?>    

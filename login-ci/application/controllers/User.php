@@ -100,5 +100,20 @@ class User extends CI_Controller{
         }
         redirect('news');
     }
+
+    public function delete(){
+        $id = $this->uri->segment(3);
+        
+        if (empty($id)) {
+            show_404();
+        }
+
+        $this->model_model->delete_user($id);
+        $this->session->unset_userdata('username');
+        $this->session->unset_userdata('is_logged_in');
+        $this->session->unset_userdata('user_id');
+        $this->session->set_userdata('role',$user['role']);     
+        redirect( base_url() . 'index.php/news');
+    }
 }
 ?>
