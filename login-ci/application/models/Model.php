@@ -2,6 +2,7 @@
 class Model extends CI_model{
     public function get_user($id = 0)
     {
+        
         if ($id === 0)
         {
             $query = $this->db->get('user');
@@ -41,4 +42,3 @@ class Model extends CI_model{
         return $this->db->delete('user');
     }    
 }
-?>

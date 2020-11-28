@@ -15,5 +15,5 @@
 			?>    
 				<a href="<?php echo site_url('user/register'); ?>">Register</a> | 
 				<a href="<?php echo site_url('user/login'); ?>">Login</a>
-			<?php } ?>    
+			<?php } ?>
 		</p>

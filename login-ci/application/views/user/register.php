@@ -18,6 +18,16 @@ echo form_open("user/register", $attributes);?>
         <td align="right">fname</td>
         <td><input type="text" name="fname"></td>
     </tr>
+    <tr>
+        <td align="right">role</td>
+        <td>
+            <select name="role"  required>
+                <option value="" disabled selected hidden>pilih role</option>
+                <option value="admin">admin</option>
+                <option value="user">user</option>
+            </select>
+        </td>
+    </tr>
     <tr>    
         <td><label for="subject">Password</label></td>
         <td><input name="password" placeholder="Password" type="password" /> <span style="color:red"><?php echo form_error('password'); ?></span></td>

@@ -15,9 +15,9 @@ class News extends CI_Controller {
         $data['news'] = $this->news_model->get_news();
         $data['title'] = 'News archive';
  
-        $this->load->view('templates/header', $data);
+        $this->load->view('template/header', $data);
         $this->load->view('news/index', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('template/footer');
     }
     
     public function view($slug = NULL)
@@ -30,9 +30,9 @@ class News extends CI_Controller {
  
         $data['title'] = $data['news_item']['title'];
  
-        $this->load->view('templates/header', $data);
+        $this->load->view('template/header', $data);
         $this->load->view('news/view', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('template/footer');
     }
     
     public function create()
@@ -49,17 +49,17 @@ class News extends CI_Controller {
         $data['title'] = 'Create a news item';
  
         $this->form_validation->set_rules('title', 'Title', 'required');
-        $this->form_validation->set_rules('text', 'Text', 'required');
+        $this->form_validation->set_rules('content', 'Text', 'required');
  
         if ($this->form_validation->run() === FALSE) {
-            $this->load->view('templates/header', $data);
+            $this->load->view('template/header', $data);
             $this->load->view('news/create');
-            $this->load->view('templates/footer');
+            $this->load->view('template/footer');
         } else {            
             $this->news_model->set_news();
-            $this->load->view('templates/header', $data);
+            $this->load->view('template/header', $data);
             $this->load->view('news/success');
-            $this->load->view('templates/footer');
+            $this->load->view('template/footer');
         }
     }
     
@@ -90,12 +90,12 @@ class News extends CI_Controller {
         }
         
         $this->form_validation->set_rules('title', 'Title', 'required');
-        $this->form_validation->set_rules('text', 'Text', 'required');
+        $this->form_validation->set_rules('content', 'Text', 'required');
  
         if ($this->form_validation->run() === FALSE) {
-            $this->load->view('templates/header', $data);
+            $this->load->view('template/header', $data);
             $this->load->view('news/edit', $data);
-            $this->load->view('templates/footer');
+            $this->load->view('template/footer');
         } else {
             $this->news_model->set_news($id);
             //$this->load->view('news/success');

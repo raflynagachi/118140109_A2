@@ -7,8 +7,12 @@ class News_model extends CI_Model {
     }
     
     public function get_news($slug = FALSE)
-    {
-        if ($slug === FALSE)
+    {   
+        if($this->session->userdata['role'] == 'admin' && $slug === FALSE){
+            $query = $this->db->get('news');
+            return $query->result_array();
+        } 
+        else if ($slug === FALSE)
         {
             $query = $this->db->get_where('news', array('user_id' => $this->session->userdata('user_id')));
             return $query->result_array(); // $query->result(); // returns object
@@ -20,7 +24,7 @@ class News_model extends CI_Model {
         // $query->num_rows(); // returns number of rows selected, similar to counting rows
         // $query->num_fields(); // returns number of fields selected
     }
-        
+
     public function get_news_by_id($id = 0)
     {
         if ($id === 0)
@@ -40,9 +44,9 @@ class News_model extends CI_Model {
         $slug = url_title($this->input->post('title'), 'dash', TRUE);
  
         $data = array(
-            'title' => $this->input->post('title'), // $this->db->escape($this->input->post('title'))
+            'title' => $this->input->post('title'),// $this->db->escape($this->input->post('title'))
             'slug' => $slug,
-            'text' => $this->input->post('text'),
+            'content' => $this->input->post('content'),
             'user_id' => $this->input->post('user_id'),
         );
         
