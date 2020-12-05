@@ -25,10 +25,12 @@ function tambah() {
     addDataToView(newList, nama);
     list.append(newList);
     i++;
+    document.getElementById("judul").innerText = "Tambah Barang";
     return false;
 }
 function hapus(id) {
     document.getElementById(id).remove();
+    document.getElementById("judul").innerText = "Hapus Barang";
 }
 function edit(id) {
     var nama = prompt("input baru: ", document.getElementById(id).innerText.split(" | ")[0]);
@@ -37,4 +39,5 @@ function edit(id) {
         li.innerHTML = "";
         addDataToView(li, nama, id);
     }
+    document.getElementById("judul").innerText = "Edit Barang";
 }
