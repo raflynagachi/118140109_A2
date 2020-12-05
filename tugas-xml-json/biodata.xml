@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<dataDiri>
+    <nama>
+        <awal>Rafly</awal>
+        <tengah>Rigan</tengah>
+        <akhir>Nagachi</akhir>
+    </nama>
+    <jeniskelamin>Laki-laki</jeniskelamin>
+    <hobi>
+        <hobi1>oprek data science</hobi1>
+        <hobi2>main game RPG (skyrim dan the witcher)</hobi2>
+    </hobi>
+    <alamat>
+        <desa>Korpri, Way Huwi</desa>
+        <kecamatan>Sukarame</kecamatan>
+        <kabupaten>Bandar Lampung</kabupaten>
+    </alamat>
+    <socialMedia>
+        <facebook>Rafly Rigan Nagachi</facebook>
+        <instagram>raflynagachi</instagram>
+    </socialMedia>
+</dataDiri>

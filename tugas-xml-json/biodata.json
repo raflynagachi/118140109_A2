@@ -1,0 +1,23 @@
+{
+    "dataDiri": {
+      "nama": {
+        "awal": "Rafly",
+        "tengah": "Rigan",
+        "akhir": "Nagachi"
+      },
+      "jeniskelamin": "Laki-laki",
+      "hobi": {
+        "hobi1": "oprek data science",
+        "hobi2": "main game RPG (skyrim dan the witcher)"
+      },
+      "alamat": {
+        "desa": "Korpri, Way Huwi",
+        "kecamatan": "Sukarame",
+        "kabupaten": "Bandar Lampung"
+      },
+      "socialMedia": {
+        "facebook": "Rafly Rigan Nagachi",
+        "instagram": "raflynagachi"
+      }
+    }
+  }
