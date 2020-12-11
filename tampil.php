@@ -5,6 +5,7 @@
         <th>Nama</th>
         <th>Prodi</th>
         <th>Angkatan</th>
+        <th>Aksi</th>
     </tr>
     <?php
     include "koneksi.php";
@@ -20,6 +21,25 @@
         <td><?php echo $data['nama'];?></td>
         <td><?php echo $data['prodi'];?></td>
         <td><?php echo $data['angkatan']; ?></td>
+        <td>
+            <button id="<?php echo $data['nim']; ?>" class="edit"> Edit </button>
+            <button id="<?php echo $data['nim']; ?>" class="hapus"> Hapus </button>
+        </td>
     </tr>
     <?php endwhile;?>
 </table>
+<script type='text/javascript'>
+$(document).on('click', '.hapus', function(){
+    var id = $(this).attr('id');
+    $.ajax({
+        type: 'POST',
+        url: "hapus.php",
+        data: {id:id},
+        success: function() {
+            $('#tampil_data').load("tampil.php");
+        }, error: function(response){
+            console.log(response.responseText);
+        }
+    });
+});
+</script>
