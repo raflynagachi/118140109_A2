@@ -29,6 +29,11 @@
     <?php endwhile;?>
 </table>
 <script type='text/javascript'>
+function reset(){
+    document.getElementById("inputNim").innerHTML = '';
+    document.getElementById("inputNama").innerHTML = '';
+}
+
 $(document).on('click', '.hapus', function(){
     var id = $(this).attr('id');
     $.ajax({
@@ -36,6 +41,31 @@ $(document).on('click', '.hapus', function(){
         url: "hapus.php",
         data: {id:id},
         success: function() {
+            $('#tampil_data').load("tampil.php");
+        }, error: function(response){
+            console.log(response.responseText);
+        }
+    });
+});
+
+$(document).on('click', '.edit', function(){
+    var id = $(this).attr('id');
+    var nama=$("#inputNama").val();
+    var prodi=$("#inputProdi").val();
+    var angkatan=$("#inputAngkatan").val();
+    $.ajax({
+        type    : 'POST',
+        url :"update.php",
+        data: {
+            id:id,
+            nama:nama,
+            prodi:prodi,
+            angkatan:angkatan
+        },
+        cache   : false,
+        success : function(data){
+            reset();
+            $('#inputNim').val(id);
             $('#tampil_data').load("tampil.php");
         }, error: function(response){
             console.log(response.responseText);

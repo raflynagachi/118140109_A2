@@ -9,18 +9,20 @@
 <body>
     <h2>Input data</h2>
     <form method="post" id="form_mahasiswa">
+        <input type="hidden" name="id" id="id">
         <table>
         <tr>
             <td><label>NIM</label></td>
-            <td><input type="number" name="nim"></td>
+            <td><input type="number" name="nim" id="inputNim" required></td>
         </tr>
         <tr>
             <td><label>Nama</label></td>
-            <td><input type="text" name="nama"><br></td>
+            <td><input type="text" name="nama" id="inputNama" required><br></td>
         </tr>
         <tr>
             <td><label>Prodi</label></td>
-            <td><select name="prodi">
+            <td><select name="prodi" id="inputProdi" required>
+                <option value="" disabled selected>Pilih program studi</option>
                 <option value="IF">Teknik Informatika</option>
                 <option value="EL">Teknik Elektro</option>
                 <option value="SI">Teknik Sipil</option>
@@ -29,7 +31,8 @@
         </tr>
         <tr>
             <td><label>Angkatan</label></td>
-            <td><select name="angkatan">
+            <td><select name="angkatan" id="inputAngkatan" required>
+                <option value="" disabled selected>Pilih angkatan</option>
                 <option value="2020">2020</option>
                 <option value="2019">2019</option>
                 <option value="2018">2018</option>
